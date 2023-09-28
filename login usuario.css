@@ -119,7 +119,11 @@ i {
 
 }
 .img-final{
-    width: 8rem;
-    margin-top: 13.5rem;
+    width: 6rem;
+    margin-top: 14.5rem;
     margin-left: 1.5rem;
+}
+.jurado{
+ justify-content: center;
+ align-items: center;
 }

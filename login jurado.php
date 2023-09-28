@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     $connectionInfo = array("Database" => "GeekFest");
     $conn = sqlsrv_connect($serverName, $connectionInfo);
     if ($conn) {
-      echo "Conexão Realizada com sucesso.<br />";
+
     } else {
       echo "Erro: Sem conexão com banco de dados.<br />";
       die(print_r(sqlsrv_errors(), true));
@@ -33,10 +33,11 @@ if (isset($_POST['submit'])) {
       if ($return["PerfilId"] == 1) {
         // redireciona pra tela de cosplay
       } else if ($return["PerfilId"] == 2) {
-        // redireciona pra tela de jurado
+        header("Location: tabela cosplayers.php");
+        exit;
       }
     } else
-      echo "deu bosta"; //manter aqui e dar msg de erro
+      echo '<script>alert("Login ou senha incorretos");</script>'; //manter aqui e dar msg de erro
   }
 }
 ?>
@@ -64,6 +65,10 @@ if (isset($_POST['submit'])) {
       <i class="fas fa-envelope iEmail"></i>
       <input type="password" name="password" placeholder="Password" required />
       <i class="fas fa-lock iPassword"></i>
+      <div class="jurado">
+        <a href="cadastro jurado.php">Cadastre-se como Jurado</a>
+      </div>
+      
       <div class="divCheck">
       </div>
       <button type="submit" name="submit">ENTRAR</button>

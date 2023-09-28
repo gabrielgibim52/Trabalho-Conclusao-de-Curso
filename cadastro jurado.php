@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
+            
     if (
         isset($_POST["firstname"]) &&
         isset($_POST["lastname"]) &&
@@ -53,8 +54,12 @@ if (isset($_POST['submit'])) {
         if ($stmt === false) {
             die(print_r(sqlsrv_errors(), true));
         }
+        
     }
-}
+        header("Location: login jurado.php");
+        exit;
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -79,7 +84,7 @@ if (isset($_POST['submit'])) {
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="login usuario.php">Login</a></button>
+                        <button><a href="login jurado.php">Login</a></button>
                     </div>
                 </div>
 
