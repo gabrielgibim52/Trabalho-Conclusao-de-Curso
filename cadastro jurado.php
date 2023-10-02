@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required maxlength="18">
                     </div>
                     <div class="input-box">
                         <label for="number">Celular</label>

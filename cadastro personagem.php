@@ -117,7 +117,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="input-box">
                         <label for="observacao">Observações</label>
-                        <input id="observacao" type="text" name="observacao" placeholder="Digite alguma observação" required>
+                        <input id="observacao" type="text" name="observacao" placeholder="Digite alguma observação">
                     </div>
                     <div class="title-box">
                         <h5>Anexe uma imagem do seu personagem abaixo</h5>
@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="continue-button">
-                <button type="submit" name="submit"><a href="#">Increver-se agora</a> </button>
+                <button type="submit" name="submit"><a href="inscrito.php">Increver-se agora</a></button>
                 </div>
             </form>
         </div>
