@@ -14,7 +14,7 @@
         <div class="item1">
             <div class="divlogin">
                 <div class="login-button">
-                    <a style="float: right;" href="login jurado.php">Login</a>
+                    <a style="float: right;" href="login_jurado.php">Login</a>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                     <div class="formButton">
                         <img class="geek-logo" src="img_cadastro/geek logo.png" alt="">
                         <div style="margin-top:40px;">
-                        <a href="cadastro personagem.php" class="cos">COSPLAYER</a>
+                        <a href="cadastro_personagem.php" class="cos">COSPLAYER</a>
                         </div>
                     </div>
                 </div>
