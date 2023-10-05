@@ -47,8 +47,8 @@ if (isset($_POST['submit'])) {
             $params = array($nome, $nomeartistico, $idade, $origem, $instagram, $observacao, $file_content, $regulamento);
             $connectionInfo = array("Database" => "GeekFest");
             $conn = sqlsrv_connect($serverName, $connectionInfo);
-            if ($conn) {
-                echo "Conexão Realizada com sucesso.<br />";
+            if ($conn) { 
+                
             } else {
                 echo "Erro: Sem conexão com banco de dados.<br />";
                 die(print_r(sqlsrv_errors(), true));
@@ -61,6 +61,8 @@ if (isset($_POST['submit'])) {
             die(print_r($e, true));
         }
     }
+    header("Location: index.php");
+    exit();
 }
 ?>
 <!DOCTYPE html>
@@ -126,11 +128,11 @@ if (isset($_POST['submit'])) {
                     </div>
                     <br>
                     <br>
-                    <label class="picture" for="picture__input" tabIndex="0">
+                    <label class="picture" for="picture__input" tabIndex="0" >
                         <span class="picture__image"></span>
                     </label>
 
-                    <input type="file" name="foto" id="picture__input">
+                    <input type="file" name="foto" id="picture__input" required>
 
                 </div>
 
@@ -141,7 +143,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input id="regulamento" type="radio" name="regulamento" value="1">
+                            <input id="regulamento" type="radio" name="regulamento" value="1" required>
                             <label for="female">Declaro que li e concordo com o regulamento do Concurso Cosplay GEEK FEST
                                 2023.</label>
                         </div>
@@ -155,7 +157,9 @@ if (isset($_POST['submit'])) {
             </form>
         </div>
     </div>
+    
     <script type="text/javascript" src="arquivo.js"></script>
+    
 </body>
 
 </html>

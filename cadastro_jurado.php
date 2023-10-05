@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
         }
         
     }
-        header("Location: login jurado.php");
+        header("Location: login_jurado.php");
         exit;
     }
 
