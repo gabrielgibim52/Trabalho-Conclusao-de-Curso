@@ -114,7 +114,7 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="input-box">
                         <label for="number">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" maxlength="13" minlength="13" required>
                     </div>
 
                     <div class="input-box">
@@ -157,6 +157,7 @@ if (isset($_POST['submit'])) {
             </form>
         </div>
     </div>
+    <script type="text/javascript" src="custom.js"></script>
 </body>
 
 </html>
