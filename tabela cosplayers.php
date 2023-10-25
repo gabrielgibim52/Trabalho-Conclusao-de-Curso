@@ -3,79 +3,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Estilizada</title>
+    <title>Table cosplayer</title>
     <link rel="stylesheet" href="tabela.css">
 </head>
 <body>
 
-    <div class="container">
-
-        <table>
-            <tr>
-                <th colspan="2">Cosplayer</th>
-                <th>Personagem</th>
-                <th colspan="2">Idade</th>
-            </tr>
-
-            <tr class="item">
-                <td class="icone">
-                </td>
-                <td>Gabriel Gibim</td>
-                <td class="right">Kratos</td>
-                <td class="right positivo">17</td>
-                <td>
-                    <button class="button">
-                        Acessar
-                    </button>
-                </td>
-            </tr>
-
-            <tr class="item">
-                <td class="icone">
-                </td>
-                <td>Facebook</td>
-                <td class="right">-30</td>
-                <td class="right negativo">4%</td>
-                <td>
-                    <button class="button">
-                        Acessar
-                    </button>
-                </td>
-            </tr>
-
-            <tr class="item">
-                <td class="icone">
-                </td>
-                <td>Twitter</td>
-                <td class="right">+20</td>
-                <td class="right positivo">5%</td>
-                <td>
-                    <button class="button">
-                        Acessar
-                    </button>
-                </td>
-            </tr>
-
-            <tr class="item">
-                <td class="icone">
-                </td>
-                <td>Youtube</td>
-                <td class="right">+2000</td>
-                <td class="right positivo">20%</td>
-                <td>
-                    <button class="button">
-                        Acessar
-                    </button>
-                </td>
-            </tr>
-
-
-        </table>
-
-
-    </div>
-
-
+    <div style="
+    width: -webkit-fill-available;
+">
+    <div class="container" style="margin:100px">
+    <?php
     
+    
+    $sql = "
+            select * from Personagem
+         ";
+    $serverName = "localhost"; //serverName\instanceName
+    $connectionInfo = array("Database" => "GeekFest");
+    $conn = sqlsrv_connect($serverName, $connectionInfo);
+    if ($conn) {
+
+    } else {
+      echo "Erro: Sem conexão com banco de dados.<br />";
+      die(print_r(sqlsrv_errors(), true));
+    }
+    $stmt = sqlsrv_query($conn, $sql);
+    if ($stmt === false) {
+      die(print_r(sqlsrv_errors(), true));
+    }
+    echo '<table>
+        <thead>
+        <tr>
+            <th>Cosplayer</th>
+            <th>Personagem</th>
+            <th>Idade</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        ';
+    while ($row = sqlsrv_fetch_array($stmt)) {
+         echo '<tr>
+         <th>'.$row['Nome'].'</th>'
+         .'<th>'.$row['NomeArtistico'].'</th>' 
+         .'<th>'.$row['Idade'].'</th>' 
+         .'<th class="icone"><a href="tabela avaliacao.php?id='.$row['PersonagemId'].'" class="btnColor">Avaliar</button></th></tr>';         
+    }
+    echo '</tbody>
+    </table>';
+
+?>
+    </div>
+    </div>
 </body>
 </html>

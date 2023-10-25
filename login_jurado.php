@@ -33,6 +33,8 @@ if (isset($_POST['submit'])) {
       if ($return["PerfilId"] == 1) {
         // redireciona pra tela de cosplay
       } else if ($return["PerfilId"] == 2) {
+        session_start();
+        $_SESSION["UsuarioId"]=$return["UsuarioId"];
         header("Location: tabela cosplayers.php");
         exit;
       }

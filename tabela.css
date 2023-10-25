@@ -21,9 +21,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50%; 
+    width: 100%; 
     background-color: rgb(229, 94, 10);
     padding: 2px 0;
+    margin: 100px;
     border-radius: 5px;
     -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.77);
     -moz-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.77);
@@ -90,3 +91,12 @@ body{
 .right{
     text-align: right;
 }
+.btnColor {
+    position: absolute;
+    width: 108px;
+    /* height: 100%; */
+    background: linear-gradient(to right, #5956e9, #a963f8);
+    border-radius: 30px;
+    transition: .3s;
+    color: #ffffff;
+  }
