@@ -37,7 +37,6 @@
             <th>Cosplayer</th>
             <th>Personagem</th>
             <th>Idade</th>
-            <th>Ações</th>
         </tr>
         </thead>
         <tbody>

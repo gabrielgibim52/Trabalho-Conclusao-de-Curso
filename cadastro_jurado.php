@@ -69,6 +69,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastro_jurado.css">
+    <script type="text/javascript" src="custom.js" defer></script>
     <title>CADASTRO USUÁRIO</title>
 </head>
 
@@ -114,7 +115,7 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="input-box">
                         <label for="number">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" maxlength="13" minlength="13" required>
+                        <input id="number" type="text" name="number" placeholder="(xx) xxxx-xxxx" maxlength="13" minlength="13" required>
                     </div>
 
                     <div class="input-box">
@@ -157,7 +158,7 @@ if (isset($_POST['submit'])) {
             </form>
         </div>
     </div>
-    <script type="text/javascript" src="custom.js"></script>
+    
 </body>
 
 </html>

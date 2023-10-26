@@ -124,7 +124,7 @@ if (isset($_POST['submit'])) {
                         <input id="observacao" type="text" name="observacao" placeholder="Digite alguma observação">
                     </div>
                     <div class="title-box">
-                        <h5>Anexe uma imagem do seu personagem abaixo</h5>
+                        <h5>Anexe uma imagem do seu personagem abaixo:</h5>
                     </div>
                     <br>
                     <br>

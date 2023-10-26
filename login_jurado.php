@@ -31,7 +31,8 @@ if (isset($_POST['submit'])) {
     $return = sqlsrv_fetch_array($stmt);
     if ($return != null && $return["UsuarioId"] != 0) {
       if ($return["PerfilId"] == 1) {
-        // redireciona pra tela de cosplay
+        header("Location: tabela cosplayers.php");
+        exit;
       } else if ($return["PerfilId"] == 2) {
         session_start();
         $_SESSION["UsuarioId"]=$return["UsuarioId"];
