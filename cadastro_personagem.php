@@ -106,7 +106,7 @@ if (isset($_POST['submit'])) {
 
                     <div class="input-box">
                         <label for="idade">Idade</label>
-                        <input id="idade" type="tel" name="idade" placeholder="Digite sua idade" required>
+                        <input id="idade" type="tel" name="idade" placeholder="Digite sua idade" maxlength="2" required>
                     </div>
 
                     <div class="input-box">
@@ -157,9 +157,8 @@ if (isset($_POST['submit'])) {
             </form>
         </div>
     </div>
-    
     <script type="text/javascript" src="arquivo.js"></script>
-    
+    <script type="text/javascript" src="custom.js" defer></script>
 </body>
 
 </html>

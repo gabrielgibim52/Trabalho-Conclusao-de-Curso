@@ -55,6 +55,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table avaliação</title>
     <link rel="stylesheet" href="tabela.css">
+    
 </head>
 <body>
 <form method="POST">
@@ -77,8 +78,7 @@ if (isset($_POST['submit'])) {
         
          echo '<tr>
          <th>'.$row['Descricao'].'</th>'
-         .'<th><input type="number" name="conceito'.$row['ConceitoId'].'"></input></th></tr>' ;
-        
+         .'<th><input name="conceito' .$row['ConceitoId']. '"></input></th></tr>' ;
     }
     echo '</tbody>
     </table>
@@ -89,5 +89,6 @@ if (isset($_POST['submit'])) {
     </div>
     <input type="submit" class="btnColor" name="submit" value="Salvar">
     </form>
+       <script type="text/javascript" src="custom.js" defer></script>
 </body>
 </html>

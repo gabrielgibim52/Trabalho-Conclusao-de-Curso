@@ -41,6 +41,36 @@ var inputTelefone = document.getElementById("number");
 		});
 		}
 
+		var inputTelefone = document.getElementById("idade");
+		if (inputTelefone) {
+			inputTelefone.addEventListener("keypress", function (event) {
+			var keyCode = event.keyCode;
+			// Verifica se o código da tecla pressionada não é um número (0-9)
+			if (keyCode < 48 || keyCode > 57) {
+			  event.preventDefault(); // Impede a entrada de caracteres não numéricos
+			}
+			// Adiciona a máscara "##" apenas se o caractere for um número
+			if (keyCode >= 48 && keyCode <= 57) {
+			  mascaraTexto(this, '##');
+			}
+		});
+		}
+
+		var inputTelefone = document.getElementById("conceito");
+		if (inputTelefone) {
+			inputTelefone.addEventListener("keypress", function (event) {
+			var keyCode = event.keyCode;
+			// Verifica se o código da tecla pressionada não é um número (0-9)
+			if (keyCode < 48 || keyCode > 57) {
+			  event.preventDefault(); // Impede a entrada de caracteres não numéricos
+			}
+			// Adiciona a máscara "##" apenas se o caractere for um número
+			if (keyCode >= 48 && keyCode <= 57) {
+			  mascaraTexto(this, '##');
+			}
+		});
+		}
+
 /* Atribui ao evento keypress do input celular a função para formatar o Celular (00 00000-0000) */
 var inputCelular = document.getElementById("celular");
 if (inputCelular != null && inputCelular.addEventListener) {                   
